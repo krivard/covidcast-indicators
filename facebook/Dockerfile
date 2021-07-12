@@ -12,8 +12,8 @@ RUN install2.r --error \
     Rcpp
 RUN apt-get update && apt-get install -qq -y python3-venv
 
-ADD ./facebook/delphiFacebook /facebook/delphiFacebook/
-ADD ./facebook/Makefile /facebook/Makefile
+ADD ./delphiFacebook /facebook/delphiFacebook/
+ADD ./Makefile /facebook/Makefile
 WORKDIR /facebook/
 RUN make lib
 RUN make install
