@@ -111,7 +111,15 @@ combine_tables <- function(seen_file, input_dir, input_files, output_file) {
     state = col_character(),
     state_fips = col_character(),
     county = col_character(),
-    county_fips = col_character()
+    county_fips = col_character(),
+    val_pct_appointment_have = col_double(),
+    se_pct_appointment_have = col_double(),
+    sample_size_pct_appointment_have = col_double(),
+    represented_pct_appointment_have = col_double(),
+    val_pct_appointment_tried = col_double(),
+    se_pct_appointment_tried = col_double(),
+    sample_size_pct_appointment_tried = col_double(),
+    represented_pct_appointment_tried = col_double()
   )
   
   # Get input data.
@@ -197,3 +205,5 @@ input_path <- args[1]
 output_path <- args[2]
 
 invisible(run_rollup(input_path, output_path))
+print(warnings())
+
