@@ -1,4 +1,4 @@
-name: Create Delphi Utils Release
+name: Create Release
 
 on:
   workflow_dispatch:
@@ -11,9 +11,6 @@ on:
 jobs:
   create_release:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: _delphi_utils_python
     steps:
       - name: Check out code
         uses: actions/checkout@v2
@@ -37,10 +34,10 @@ jobs:
       - name: Create pull request into prod
         uses: peter-evans/create-pull-request@v3
         with:
-          branch: release/delphi-utils_v${{ steps.version.outputs.next_tag }}
-          commit-message: 'chore: release delphi-utils ${{ steps.version.outputs.next_tag }}'
+          branch: release/${{ steps.version.outputs.next_tag }}
+          commit-message: 'chore: release ${{ steps.version.outputs.next_tag }}'
           base: prod
-          title: Release delphi-utils ${{ steps.version.outputs.next_tag }}
+          title: Release ${{ steps.version.outputs.next_tag }}
           labels: chore
           reviewers: krivard
           assignees: krivard
