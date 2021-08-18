@@ -46,7 +46,7 @@ jobs:
         run: |
           echo -n "::set-output name=version::"
           bump2version --list -n ${{ github.event.inputs.versionName }} | grep ^current_version | sed -r s,"^.*=",,
-          echo "::set-output name=msg::(same as it was)
+          echo "::set-output name=msg::(same as it was)"
       - name: Bump covidcast-indicators version
         id: indicators
         run: |
