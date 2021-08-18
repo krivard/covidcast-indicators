@@ -31,6 +31,8 @@ jobs:
         uses: dorny/paths-filter@v2
         id: changes
         with:
+          base: 'prod'
+          ref: 'main'
           filters: |
             utils:
               - '_delphi_utils_python/**'
