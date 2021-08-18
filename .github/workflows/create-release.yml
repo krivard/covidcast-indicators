@@ -25,6 +25,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
+      - name: Install bump2version
         run: python -m pip install bump2version
       - name: Check for delphi-utils changes
         uses: dorny/paths-filter@v2
