@@ -37,10 +37,10 @@ jobs:
       - name: Create pull request into prod
         uses: peter-evans/create-pull-request@v3
         with:
-          branch: release/${{ steps.version.outputs.next_tag }}
-          commit-message: 'chore: release ${{ steps.version.outputs.next_tag }}'
+          branch: release/delphi-utils_v${{ steps.version.outputs.next_tag }}
+          commit-message: 'chore: release delphi-utils ${{ steps.version.outputs.next_tag }}'
           base: prod
-          title: Release ${{ steps.version.outputs.next_tag }}
+          title: Release delphi-utils ${{ steps.version.outputs.next_tag }}
           labels: chore
           reviewers: krivard
           assignees: krivard
