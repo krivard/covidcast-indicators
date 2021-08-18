@@ -21,6 +21,8 @@ jobs:
         run: |
           git fetch origin main:main
           git reset --hard main
+          git config --global user.email delphibot@example.com
+          git config --global user.name "Delphi Deploy Bot"
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
