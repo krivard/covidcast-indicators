@@ -1,15 +1,12 @@
-name: [local test] Release Delphi Utils
+name: (local test) Release Delphi Utils
 
 on:
   push:
-    branches:
-      - prod
-    tags:
-      - delphi_utils/*
+    branches: [ prod ]
+    tags: [ delphi_utils/* ]
   workflow_dispatch:
 
 jobs:
-
   create_delphi_utils_release:
     runs-on: ubuntu-latest
     defaults:
