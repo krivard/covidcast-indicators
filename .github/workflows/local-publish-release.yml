@@ -24,7 +24,7 @@ jobs:
         id: changes
         with:
           base: 'prod'
-          ref: 'prod~1'
+          ref: 'prod'
           filters: |
             utils:
               - '_delphi_utils_python/**'
