@@ -24,7 +24,7 @@ required = [
 
 setup(
     name="delphi_utils",
-    version="0.1.10",
+    version="0.1.11",
     description="Shared Utility Functions for Delphi Indicators - toy edit",
     long_description=long_description,
     long_description_content_type="text/markdown",

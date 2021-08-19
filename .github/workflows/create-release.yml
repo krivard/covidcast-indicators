@@ -57,9 +57,7 @@ jobs:
         id: indicators
         run: |
           echo -n "::set-output name=version::"
-          bump2version --list ${{ github.event.inputs.versionName }} | grep ^new_version | sed -r s,"^.*=",,
-      - name: Publish tags
-        run: git push --tags        
+          bump2version --list ${{ github.event.inputs.versionName }} | grep ^new_version | sed -r s,"^.*=",,       
       - name: Create pull request into prod
         uses: peter-evans/create-pull-request@v3
         with:
